@@ -51,13 +51,13 @@ const AccountModal = (props: ModalProps) => {
           className="mars"
         />
       </div>
-      <Localized id="keep-track-profile">
+      {/* <Localized id="keep-track-profile">
         <h1 />
       </Localized>
       <Localized id="login-to-get-started">
         <h2 />
-      </Localized>
-      <Localized id="login-signup">
+      </Localized> */}
+      {/* <Localized id="login-signup">
         <LinkButton
           rounded
           href="/login"
@@ -67,12 +67,14 @@ const AccountModal = (props: ModalProps) => {
             trackProfile('contribution-conversion-modal', locale);
           }}
         />
-      </Localized>
+      </Localized> */}
     </Modal>
   );
 };
 
-export const SET_COUNT = 5;
+//Sample counter
+
+export const SET_COUNT = 1;
 
 export interface ContributionPillProps {
   isOpen: boolean;

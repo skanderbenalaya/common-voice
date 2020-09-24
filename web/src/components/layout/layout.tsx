@@ -144,7 +144,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
     challengeToken: undefined,
     isMenuVisible: false,
     hasScrolled: false,
-    showStagingBanner: !isProduction(),
+    showStagingBanner: isProduction(),
     showWelcomeModal: false,
     featureStorageKey: null,
   };
@@ -299,13 +299,13 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
           </div>
           <div>
             {this.renderTallies()}
-            {user.account ? (
+            {/* {user.account ? (
               <UserMenu />
             ) : isBuildingProfile ? null : (
               <Localized id="login-signup">
                 <LinkButton className="login" href="/login" rounded outline />
               </Localized>
-            )}
+            )} */}
             {LOCALES.length > 1 && (
               <LocalizationSelect
                 locale={locale}
@@ -382,7 +382,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                   </LocaleNavLink>
                 </div>
               )}
-              {!isBuildingProfile && (
+              {/* {!isBuildingProfile && (
                 <>
                   {user.account ? (
                     <Localized id="logout">
@@ -394,7 +394,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                     </Localized>
                   )}
                 </>
-              )}
+              )} */}
             </div>
           </Nav>
         </div>

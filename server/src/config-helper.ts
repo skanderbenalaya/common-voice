@@ -59,12 +59,12 @@ const configEntry = (key: string, defaultValue: any, cast = castDefault) =>
 const BASE_CONFIG: CommonVoiceConfig = {
   VERSION: configEntry('CV_VERSION', null), // Migration number (e.g. 20171205171637), null = most recent
   RELEASE_VERSION: configEntry('GIT_COMMIT_SHA', null), // release version set by nubis,
-  PROD: configEntry('CV_PROD', false, castBoolean), // Set to true for staging and production.
+  PROD: configEntry('CV_PROD', true, castBoolean), // Set to true for staging and production.
   SERVER_PORT: configEntry('CV_SERVER_PORT', 9000, castInt),
-  DB_ROOT_USER: configEntry('CV_DB_ROOT_USER', 'root'), // For running schema migrations.
-  DB_ROOT_PASS: configEntry('CV_DB_ROOT_PASS', ''),
-  MYSQLUSER: configEntry('CV_MYSQLUSER', 'voicecommons'), // For normal DB interactions.
-  MYSQLPASS: configEntry('CV_MYSQLPASS', 'voicecommons'),
+  DB_ROOT_USER: configEntry('CV_DB_ROOT_USER', 'usertest'), // For running schema migrations.
+  DB_ROOT_PASS: configEntry('CV_DB_ROOT_PASS', 'passwordtest'),
+  MYSQLUSER: configEntry('CV_MYSQLUSER', 'usertest'), // For normal DB interactions.
+  MYSQLPASS: configEntry('CV_MYSQLPASS', 'passwordtest'),
   MYSQLDBNAME: configEntry('CV_MYSQLDBNAME', 'voiceweb'),
   MYSQLHOST: configEntry('CV_MYSQLHOST', 'localhost'),
   MYSQLPORT: configEntry('CV_MYSQLPORT', 3306, castInt),

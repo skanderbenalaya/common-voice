@@ -145,7 +145,7 @@ function Success({
         />
       </div>
 
-      {hasAccount ? (
+      {/* {hasAccount ? (
         !customGoal && (
           <div className="info-card">
             <Localized
@@ -171,7 +171,7 @@ function Success({
             />
           </Localized>
         </div>
-      )}
+      )} */}
 
       <ContributeMoreButton>
         {type === 'speak' ? <MicIcon /> : <PlayOutlineIcon />}

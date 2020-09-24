@@ -27,7 +27,7 @@ export default function Landing() {
         <Localized id="help-contribute">
           <p className="main-paragraph" />
         </Localized>
-        {hasAccount ? (
+        {/* {hasAccount ? (
           <Localized id="speak-subtitle">
             <LinkButton
               rounded
@@ -43,7 +43,7 @@ export default function Landing() {
               onClick={() => trackLanding('profile')}
             />
           </Localized>
-        )}
+        )} */}
         <Localized id="profile-not-required">
           <p className="profile-not-required" />
         </Localized>

@@ -147,7 +147,7 @@
 
     & .line {
         margin: 0 auto;
-        width: 1px;
+        width: 0px;
         height: 16px;
 
         @media (--md-up) {

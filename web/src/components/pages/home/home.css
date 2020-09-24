@@ -2,7 +2,8 @@
 
 .home #content {
     padding: 0;
-
+    height: auto;
+    overflow-y: visible;
     & > div {
         max-width: none;
 
@@ -13,6 +14,8 @@
 }
 
 .home {
+    height: inherit;
+    overflow-y: hidden;
     & .primary-button a {
         z-index: var(--middle-z-index);
     }
@@ -151,6 +154,7 @@
         align-items: center;
         justify-content: center;
         background: var(--white);
+        margin-top: 150px;
         padding: 0 20px;
 
         @media (--md-down) {
