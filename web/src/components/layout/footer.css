@@ -1,7 +1,6 @@
 @import url('../vars.css');
 
 footer {
-    margin-top: 2rem;
     background-color: var(--black);
 }
 
@@ -9,8 +8,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6rem;
-    background-color: var(--light-grey);
+    height: 8rem;
+    background-color: var(--white);
 
     @media (--md-up) {
         height: 9.3rem;
@@ -20,7 +19,7 @@ footer {
     & button {
         box-sizing: border-box;
         text-align: center;
-        width: 10rem;
+        width: 12rem;
         font-size: var(--font-size-xs);
         cursor: pointer;
 
@@ -35,7 +34,7 @@ footer {
 
     & img {
         margin-bottom: var(--standard-margin);
-        width: 21px;
+        width: 25px;
 
         @media (--md-up) {
             width: 26px;

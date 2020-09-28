@@ -1,0 +1,29 @@
+/* 
+
+.headerlogos {
+    display: inline-flex;
+    float: left;
+    width: 200px;
+    height: 15px;
+}
+svg {
+    width: 50%;
+    height: 50%;
+}
+.col {
+    float: left;
+    height: 50%;
+    width: 50%;
+    padding: 5px;
+  }
+
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.row{
+    height: inherit;
+    width:  inherit;
+} */

@@ -14,7 +14,10 @@ function uniqueIcon(component: (id: number, props: any) => React.ReactNode) {
     }
   };
 }
-
+export const iCompassIcon = Icon(
+  require('./icons/logo_icopass_footer.svg'),
+  'support'
+);
 export const ArrowLeft = uniqueIcon((id, props) => (
   <svg width="24" height="24" viewBox="0 0 24 24" {...props}>
     <defs>

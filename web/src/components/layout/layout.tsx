@@ -41,6 +41,9 @@ import {
 import API from '../../services/api';
 import NotificationBanner from './../notification-banner/notification-banner';
 import { Notifications } from '../../stores/notifications';
+import './layout.css';
+const Aziza = require('./logo_aziza.svg');
+const Raicom = require('./logo_raicom.svg');
 
 const LOCALES_WITH_NAMES = LOCALES.map(code => [
   code,
@@ -293,9 +296,16 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
             />
           )}
         <header className={hasScrolled ? 'active' : ''}>
-          <div>
-            <Logo />
-            <Nav id="main-nav" />
+          <Logo />
+          <div style={{ paddingLeft: '20%', width: '160px', height: '90px' }}>
+            <img style={{ width: '140px', height: '90px' }} src={Raicom} />
+          </div>
+          <div style={{ paddingLeft: '8%', width: '150px', height: '150px' }}>
+            <a
+              href="https://www.facebook.com/3ziza-113036200325554/"
+              target="_blank">
+              <img style={{ width: '150px', height: '150px' }} src={Aziza} />
+            </a>
           </div>
           <div>
             {this.renderTallies()}
@@ -342,8 +352,9 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
             </button>
           </div>
         )}
-        <Content location={location} />
         <Footer />
+        <Content location={location} />
+
         <div
           id="navigation-modal"
           className={this.state.isMenuVisible ? 'active' : ''}>

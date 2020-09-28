@@ -10,7 +10,7 @@ services:
       - MYSQL_DATABASE=voiceweb
       - MYSQL_USER=voicecommons
       - MYSQL_PASSWORD=voicecommons
-      - MYSQL_ROOT_PASSWORD=voicewebroot
+      - MYSQL_ROOT_PASSWORD=worxin15324
   s3proxy:
     image: andrewgaul/s3proxy
     container_name: s3proxy

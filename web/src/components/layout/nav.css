@@ -11,7 +11,7 @@ header {
     transition: background-color var(--transition-duration) linear,
         box-shadow var(--transition-duration) linear;
     padding: var(--page-margin);
-    background: var(--white);
+    background: var(--darkblue);
     z-index: var(--header-z-index);
 
     @media (--lg-up) {
@@ -135,7 +135,7 @@ header {
             position: absolute;
             bottom: -16px;
             left: 0;
-            height: 16px;
+            height: 200px;
             width: 100%;
         }
 

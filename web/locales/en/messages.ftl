@@ -207,7 +207,7 @@ hours-validated = Hours Validated
 voices-online = Voices Online Now
 todays-progress = Today's Progress
 help-reach-goal =  
-read-terms-q = Have you read our Terms?
+read-terms-q =  
 ready-to-record = Ready to donate your voice?
 all-locales = All
 today = Today
@@ -649,8 +649,8 @@ clips-with-count-pluralized = { $count ->
                     [one] <bold>{ $count }</bold> Clip
                     *[other] <bold>{ $count }</bold> Clips
 }
-goal-help-recording = You've helped Common Voice reach <goalPercentage></goalPercentage> of our daily { $goalValue } recording goal!
-goal-help-validation = You've helped Common Voice reach <goalPercentage></goalPercentage> of our daily { $goalValue } validation goal!
+goal-help-recording = Your recording is being saved.
+goal-help-validation = Validation saved.
 contribute-more =
     { $count ->
        *[other] Ready to do { $count } more?

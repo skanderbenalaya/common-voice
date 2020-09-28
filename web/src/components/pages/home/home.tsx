@@ -130,14 +130,14 @@ export default function HomePage() {
             </Localized>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <div className="stats" ref={statsRef}>
         <ClipsStats.Root />
         <VoiceStats />
       </div>
 
-      {/* {user.account ? (
+       {user.account ? (
         <section className="contribute-section">
           <div className="mars-container">
             <img src="/img/mars.svg" alt="Mars" />

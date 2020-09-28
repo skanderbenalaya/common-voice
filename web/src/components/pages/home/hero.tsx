@@ -111,7 +111,7 @@ class Hero extends React.Component<
               <p className="description" />
             </Localized>
             <Localized id="read-terms-q">
-              <LocaleLink to={URLS.TERMS} className="terms" />
+              {/* <LocaleLink to={URLS.TERMS} className="terms" /> */}
             </Localized>
           </div>
         </div>
@@ -136,8 +136,8 @@ class Hero extends React.Component<
           <span className="progress-count">
             <span className="current">{count === null ? '?' : count}</span>
             <span className="total">
-              {' / '}
-              {DAILY_GOALS[type][0]}
+              {/* {' / '}
+              {DAILY_GOALS[type][0]} */}
             </span>
           </span>
           <p>
