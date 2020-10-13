@@ -297,16 +297,6 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
           )}
         <header className={hasScrolled ? 'active' : ''}>
           <Logo />
-          <div style={{ paddingLeft: '20%', width: '160px', height: '90px' }}>
-            <img style={{ width: '140px', height: '90px' }} src={Raicom} />
-          </div>
-          <div style={{ paddingLeft: '8%', width: '150px', height: '150px' }}>
-            <a
-              href="https://www.facebook.com/3ziza-113036200325554/"
-              target="_blank">
-              <img style={{ width: '150px', height: '150px' }} src={Aziza} />
-            </a>
-          </div>
           <div>
             {this.renderTallies()}
             {/* {user.account ? (

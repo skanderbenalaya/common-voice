@@ -21,7 +21,8 @@ import logo_ms from './logo_ms.png';
 import logo_pm from './logo_pm.png';
 import logo_starfolk from './logo_starfolk.png';
 import './footer.css';
-
+const Aziza = require('./logo_aziza.svg');
+const Raicom = require('./logo_raicom.svg');
 const LocalizedLocaleLink = ({ id, to }: { id: string; to: string }) => {
   const [locale] = useLocale();
   return (
@@ -36,30 +37,11 @@ export default React.memo(() => {
   return (
     <footer>
       <div id="help-links">
-        <img
-          style={{ padding: '18px', width: '150px', height: '150px' }}
-          src={logo_pm}
-        />
-        <img
-          style={{ padding: '7px', width: '140px', height: '140px' }}
-          src={logo_ms}
-        />
-        <img
-          style={{ padding: '7px', width: '170px', height: '136px' }}
-          src={logo_mi}
-        />
-        <img
-          style={{ padding: '5px', width: '150px', height: '130px' }}
-          src={logo_starfolk}
-        />
-        <img
-          style={{ padding: '5px', width: '180px', height: '100px' }}
-          src={logo_enova}
-        />
-        <img
-          style={{ padding: '20px', width: '90px', height: '90px' }}
-          src={logo_beep}
-        />
+        <img src={logo_pm} />
+        <img src={logo_ms} />
+        <img src={logo_mi} />
+        <img src={Aziza} />
+        <img src={Raicom} />
       </div>
     </footer>
   );

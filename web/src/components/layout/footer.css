@@ -8,11 +8,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8rem;
+    height: 5rem;
     background-color: var(--white);
 
     @media (--md-up) {
-        height: 9.3rem;
+        height: 7.3rem;
     }
 
     & a,
@@ -34,10 +34,12 @@ footer {
 
     & img {
         margin-bottom: var(--standard-margin);
-        width: 25px;
+        width: 50px;
+        margin-right: 6%;
 
         @media (--md-up) {
-            width: 26px;
+            width: 58px;
+            margin-right: 8%;
         }
     }
 

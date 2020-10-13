@@ -63,7 +63,7 @@ const BASE_CONFIG: CommonVoiceConfig = {
   SERVER_PORT: configEntry('CV_SERVER_PORT', 9000, castInt),
   DB_ROOT_USER: configEntry('CV_DB_ROOT_USER', 'root'), // For running schema migrations.
   DB_ROOT_PASS: configEntry('CV_DB_ROOT_PASS', 'worxin15324'),
-  MYSQLUSER: configEntry('CV_MYSQLUSER', 'vocecommons'), // For normal DB interactions.
+  MYSQLUSER: configEntry('CV_MYSQLUSER', 'voicecommons'), // For normal DB interactions.
   MYSQLPASS: configEntry('CV_MYSQLPASS', 'voicecommons'),
   MYSQLDBNAME: configEntry('CV_MYSQLDBNAME', 'voiceweb'),
   MYSQLHOST: configEntry('CV_MYSQLHOST', 'localhost'),
