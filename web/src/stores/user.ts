@@ -26,7 +26,7 @@ export namespace User {
       email: null,
       sendEmails: false,
       hasDownloaded: false,
-      privacyAgreed: false,
+      privacyAgreed: true,
       recordTally: 0,
       validateTally: 0,
 

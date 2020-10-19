@@ -20,11 +20,22 @@ export default class Bucket {
    * Fetch a public url for the resource.
    */
   private getPublicUrl(key: string) {
-    return this.s3.getSignedUrl('getObject', {
+    let safeUrl = this.s3.getSignedUrl('getObject', {
       Bucket: getConfig().BUCKET_NAME,
       Key: key,
       Expires: 24 * 60 * 30,
     });
+    safeUrl = safeUrl.replace('s3proxy:80', 'localhost:8080');
+    console.log(
+      '*****************Bucket resource safeUrl****************',
+      safeUrl
+    );
+    // console.log("*****************Bucket resource getPublicUrl****************",this.s3.getSignedUrl('getObject', {
+    //   Bucket: getConfig().BUCKET_NAME,
+    //   Key: key,
+    //   Expires: 24 * 60 * 30,
+    // }));
+    return safeUrl;
   }
 
   /**
@@ -69,6 +80,10 @@ export default class Bucket {
 
   async getClipUrl(id: string): Promise<string> {
     const clip = await this.model.db.findClip(id);
+    // let publiclink=this.getPublicUrl(clip.path);
+    // publiclink.replace("s3proxy:80","localhost:8080");
+    // console.log("**************************async function getPublicUrl*************************",this.getPublicUrl(clip.path));
+    // console.log("**************************Publiclink*************************",publiclink);
     return this.getPublicUrl(clip.path);
   }
 }

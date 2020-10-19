@@ -77,7 +77,7 @@ function ProfilePage({
     age: '',
     gender: '',
     sendEmails: false,
-    privacyAgreed: false,
+    privacyAgreed: true,
   });
   const {
     username,

@@ -51,23 +51,6 @@ const AccountModal = (props: ModalProps) => {
           className="mars"
         />
       </div>
-      {/* <Localized id="keep-track-profile">
-        <h1 />
-      </Localized>
-      <Localized id="login-to-get-started">
-        <h2 />
-      </Localized> */}
-      {/* <Localized id="login-signup">
-        <LinkButton
-          rounded
-          href="/login"
-          className={getTrackClass('fs', `nudge-profile-modal`)}
-          onClick={() => {
-            sessionStorage.setItem('redirectURL', location.pathname);
-            trackProfile('contribution-conversion-modal', locale);
-          }}
-        />
-      </Localized> */}
     </Modal>
   );
 };
@@ -331,11 +314,11 @@ class ContributionPage extends React.Component<Props, State> {
             {...reportModalProps}
           />
         )}
-        {showAccountModal && (
+        {/* {showAccountModal && (
           <AccountModal
             onRequestClose={() => this.setState({ showAccountModal: false })}
           />
-        )}
+        )} */}
         <div
           className={[
             'contribution',

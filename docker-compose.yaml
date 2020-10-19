@@ -19,6 +19,8 @@ services:
     environment:
       - S3PROXY_AUTHORIZATION=none
       - S3PROXY_CORS_ALLOW_ALL=true
+    ports:
+      - 8080:80
   web:
     build:
       context: .
@@ -35,6 +37,5 @@ services:
     ports:
       - 9000:9000
     command: bash -c "/code/docker/prepare_s3.sh && yarn && yarn start"
-
 networks:
   voice-web:

@@ -20,7 +20,7 @@ import { trackRecording, getTrackClass } from '../../../../services/tracker';
 import URLS from '../../../../urls';
 import { localeConnector, LocalePropsFromState } from '../../../locale-helpers';
 import Modal, { ModalButtons } from '../../../modal/modal';
-import TermsModal from '../../../terms-modal';
+// import TermsModal from '../../../terms-modal';
 import {
   CheckIcon,
   MicIcon,
@@ -408,7 +408,7 @@ class SpeakPage extends React.Component<Props, State> {
     });
   };
 
-  private upload = (hasAgreed: boolean = false) => {
+  private upload = (hasAgreed: boolean = true) => {
     const {
       addAchievement,
       addNotification,
@@ -423,7 +423,7 @@ class SpeakPage extends React.Component<Props, State> {
 
     if (!hasAgreed && !(user.privacyAgreed || user.account)) {
       this.setState({ showPrivacyModal: true });
-      return false;
+      return true;
     }
 
     const clips = this.state.clips.filter(clip => clip.recording);
@@ -612,12 +612,6 @@ class SpeakPage extends React.Component<Props, State> {
             </Modal>
           )}
         </NavigationPrompt>
-        {showPrivacyModal && (
-          <TermsModal
-            onAgree={this.agreeToTerms}
-            onDisagree={this.toggleDiscardModal}
-          />
-        )}
         {showDiscardModal && (
           <Localized id="review-aborted">
             <Modal

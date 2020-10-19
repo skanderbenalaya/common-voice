@@ -27,8 +27,10 @@ export default class Clip {
 
   constructor(model: Model) {
     this.s3 = AWS.getS3();
+    console.log('s3 data', this.s3);
     this.model = model;
     this.bucket = new Bucket(this.model, this.s3);
+    console.log('bucket data', this.bucket);
   }
 
   getRouter() {
@@ -69,7 +71,7 @@ export default class Clip {
   }
 
   serveClip = async ({ params }: Request, response: Response) => {
-    response.redirect(await this.bucket.getClipUrl(params.clip_id));
+    response.redirect(await await this.bucket.getClipUrl(params.clip_id));
   };
 
   saveClipVote = async (

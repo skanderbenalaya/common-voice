@@ -16,7 +16,6 @@ MAINTAINER ${MAINTAINER}
 
 # Allow exposing HTTP endpoint
 EXPOSE 9000
-EXPOSE 80
 # Add project source
 COPY . /code
 

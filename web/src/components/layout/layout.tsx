@@ -279,15 +279,15 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
     return (
       <div id="main" className={className}>
         {alreadyEnrolled && <Redirect to={redirectURL} />}
-        {showWelcomeModal && !alreadyEnrolled && (
-          <WelcomeModal
-            onRequestClose={() => {
-              this.setState({ showWelcomeModal: false });
-            }}
-            challengeToken={challengeToken}
-            teamToken={challengeTeamToken}
-          />
-        )}
+        {/* {showWelcomeModal && !alreadyEnrolled && (
+          // <WelcomeModal
+          //   onRequestClose={() => {
+          //     this.setState({ showWelcomeModal: false });
+          //   }}
+          //   challengeToken={challengeToken}
+          //   teamToken={challengeTeamToken}
+          // />
+        )} */}
         {featureStorageKey &&
           localStorage.getItem(featureStorageKey) !== 'true' && (
             <SegmentBanner
