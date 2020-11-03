@@ -132,6 +132,10 @@
                     margin-inline-end: 40px;
                 }
 
+                &:last-child {
+                    margin-inline-start: 40px;
+                }
+
                 &.active {
                     color: var(--blue);
                     border-bottom: 2px solid var(--blue);

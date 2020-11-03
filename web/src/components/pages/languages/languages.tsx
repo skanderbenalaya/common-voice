@@ -228,6 +228,7 @@ class LanguagesPage extends React.PureComponent<Props, State> {
       ),
       speakLink: <StyledLink to={URLS.SPEAK} />,
       listenLink: <StyledLink to={URLS.LISTEN} />,
+      writeLink: <StyledLink to={URLS.WRITE} />,
     };
 
     const inProgressCountLabel = query ? (

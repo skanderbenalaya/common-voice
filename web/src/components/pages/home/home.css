@@ -3,7 +3,7 @@
 .home #content {
     padding: 0;
     height: auto;
-    overflow-y: visible;
+    overflow-y: hidden;
     & > div {
         max-width: none;
 

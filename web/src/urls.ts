@@ -6,6 +6,7 @@ export default Object.freeze({
   RECORD: '/record', // old, here for redirect purposes
   SPEAK: '/speak',
   LISTEN: '/listen',
+  WRITE: '/write',
 
   PROFILE,
   PROFILE_INFO: PROFILE + '/info',

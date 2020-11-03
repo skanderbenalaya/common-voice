@@ -96,7 +96,7 @@ interface Props extends WithLocalizationProps, PropsFromState {
     label: string;
     action: () => any;
   }[];
-  type: 'speak' | 'listen';
+  type: 'speak' | 'listen' | 'write';
 }
 
 interface State {
@@ -343,6 +343,12 @@ class ContributionPage extends React.Component<Props, State> {
                 <LocaleNavLink
                   className={getTrackClass('fs', `toggle-listen`)}
                   to={URLS.LISTEN}
+                />
+              </Localized>
+              <Localized id="write">
+                <LocaleNavLink
+                  className={getTrackClass('fs', `toggle-write`)}
+                  to={URLS.WRITE}
                 />
               </Localized>
             </div>

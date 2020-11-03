@@ -101,12 +101,20 @@ export default class API {
     return this.getLocalePath() + '/clips';
   }
 
+  getNewClipPath() {
+    return this.getLocalePath() + '/newclips';
+  }
+
   fetchRandomSentences(count: number = 1): Promise<Sentence[]> {
     return this.fetch(`${this.getLocalePath()}/sentences?count=${count}`);
   }
 
   fetchRandomClips(count: number = 1): Promise<Clip[]> {
     return this.fetch(`${this.getClipPath()}?count=${count}`);
+  }
+
+  fetchRandomNewClips(count: number = 1): Promise<Clip[]> {
+    return this.fetch(`${this.getNewClipPath()}?count=${count}`);
   }
 
   uploadClip(
@@ -129,6 +137,27 @@ export default class API {
       body: blob,
     });
   }
+  saveTranscript(
+    Transcript: string,
+    NewClipId: string
+  ): Promise<{
+    showFirstContributionToast?: boolean;
+    hasEarnedSessionToast?: boolean;
+    showFirstStreakToast?: boolean;
+    challengeEnded: boolean;
+  }> {
+    return this.fetch(`${this.getNewClipPath()}/${NewClipId}/transcript`, {
+      method: 'POST',
+      headers: {
+        newclip_id: NewClipId,
+      },
+      body: {
+        Transcript,
+        challenge: getChallenge(this.user),
+      },
+    });
+  }
+
   saveVote(id: string, isValid: boolean): Promise<Vote> {
     return this.fetch(`${this.getClipPath()}/${id}/votes`, {
       method: 'POST',

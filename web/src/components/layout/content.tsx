@@ -145,6 +145,15 @@ export default function Content({ location }: { location: any }) {
               return <Redirect to={toLocaleRoute(URLS.LISTEN)} />;
             }}
           />
+          <Route
+            exact
+            path={toLocaleRoute(URLS.WRITE)}
+            render={() => {
+              // note: this is redundant with routing in LocalizedPage in app.tsx, and hanldes
+              // locale changing edge cases where toLocaleRoute is still using the old locale
+              return <Redirect to={toLocaleRoute(URLS.WRITE)} />;
+            }}
+          />
           <Redirect
             push
             to={{

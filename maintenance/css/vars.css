@@ -64,7 +64,7 @@
 @custom-media --xs-up (width >= 350px);
 @custom-media --sm-up (width >= 576px);
 @custom-media --md-up (width >= 768px);
-@custom-media --lg-up (width >= 992px);
+@custom-media --lg-up (width >= 1500px);
 @custom-media --xl-up (width >= 1200px);
 
 @custom-media --xs-down (width < 576px);

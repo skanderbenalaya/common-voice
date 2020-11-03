@@ -54,6 +54,10 @@
         background-image: url('images/speak.svg');
     }
 
+    &.write::before {
+        background-image: url('images/write.svg');
+    }
+
     & .column {
         display: flex;
         flex-direction: column;
@@ -232,7 +236,13 @@
                     fill: var(--white);
                 }
             }
+            &.write a {
+                background: #bc5fd3;
 
+                & path {
+                    fill: var(--white);
+                }
+            }
             &.play a {
                 background: var(--valid-green);
 
@@ -247,21 +257,35 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
-        background: url('images/fading.svg');
-        background-size: 100% 100%;
+
         pointer-events: none;
     }
 
     &.listen .fading {
+        background: url('images/fadinglisten.svg');
+        background-size: 100% 100%;
+        transform: scaleX(0);
+        /* left: auto;
+        right: 0; */
+    }
+
+    &.write .fading {
+        background: url('images/fading.svg');
+        background-size: 100% 100%;
         transform: scaleX(-1);
-        left: -1px;
+        /* right:auto;
+        left: auto; */
     }
 
     &.speak .fading {
-        left: auto;
-        right: -1px;
+        background: url('images/fading.svg');
+        background-size: 100% 100%;
+        transform: scaleX(1);
+        /* left: auto;
+        right: auto; */
     }
 
     & a.terms {

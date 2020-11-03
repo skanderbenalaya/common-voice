@@ -14,10 +14,10 @@ import { ClipsStats, VoiceStats } from './stats';
 
 import './home.css';
 
-type HeroType = 'speak' | 'listen';
+type HeroType = 'speak' | 'listen' | 'write';
 
 export default function HomePage() {
-  const heroes = ['speak', 'listen'];
+  const heroes = ['speak', 'listen', 'write'];
   const { locale, user } = useTypedSelector(
     ({ locale, user }) => ({
       locale,

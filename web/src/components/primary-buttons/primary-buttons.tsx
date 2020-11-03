@@ -2,7 +2,7 @@ import * as React from 'react';
 import URLS from '../../urls';
 import { LocaleLink } from '../locale-helpers';
 import { getTrackClass } from '../../services/tracker';
-import { MicIcon, OldPlayIcon, StopIcon } from '../ui/icons';
+import { MicIcon, OldPlayIcon, WriteIcon, StopIcon } from '../ui/icons';
 
 import './primary-buttons.css';
 
@@ -76,5 +76,11 @@ export const PlayButton = ({
 export const PlayLink = (props: any) => (
   <PrimaryButton className="play" to={URLS.LISTEN} {...props}>
     <OldPlayIcon />
+  </PrimaryButton>
+);
+
+export const WriteLink = (props: any) => (
+  <PrimaryButton className="write" to={URLS.WRITE} {...props}>
+    <WriteIcon />
   </PrimaryButton>
 );

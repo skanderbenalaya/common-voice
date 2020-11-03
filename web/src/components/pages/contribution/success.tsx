@@ -37,7 +37,7 @@ function Success({
   onReset,
   type,
 }: {
-  type: 'speak' | 'listen';
+  type: 'speak' | 'listen' | 'write';
   onReset: () => any;
 } & WithLocalizationProps) {
   const api = useAPI();

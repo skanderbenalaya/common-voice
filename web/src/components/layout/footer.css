@@ -12,7 +12,7 @@ footer {
     background-color: var(--white);
 
     @media (--md-up) {
-        height: 7.3rem;
+        height: 11.3rem;
     }
 
     & a,
@@ -34,11 +34,11 @@ footer {
 
     & img {
         margin-bottom: var(--standard-margin);
-        width: 50px;
+        width: 6%;
         margin-right: 6%;
 
         @media (--md-up) {
-            width: 58px;
+            width: 6%;
             margin-right: 8%;
         }
     }

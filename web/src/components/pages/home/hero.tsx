@@ -8,7 +8,11 @@ import { Locale } from '../../../stores/locale';
 import StateTree from '../../../stores/tree';
 import URLS from '../../../urls';
 import { LocaleLink } from '../../locale-helpers';
-import { PlayLink, RecordLink } from '../../primary-buttons/primary-buttons';
+import {
+  PlayLink,
+  WriteLink,
+  RecordLink,
+} from '../../primary-buttons/primary-buttons';
 
 import './hero.css';
 
@@ -25,7 +29,7 @@ type State = {
 
 class Hero extends React.Component<
   {
-    type: 'speak' | 'listen';
+    type: 'speak' | 'listen' | 'write';
     status: 'active' | 'compressed' | null;
     onShow: () => any;
     onHide: () => any;
@@ -90,7 +94,11 @@ class Hero extends React.Component<
     const { locale, onHide, onShow, status, type } = this.props;
     const { count } = this.state;
     const isSpeak = type == 'speak';
-    const PrimaryLink = isSpeak ? RecordLink : PlayLink;
+    const isListen = type == 'listen';
+    // if (isSpeak){const PrimaryLink= RecordLink;}
+    // else if (isListen){const PrimaryLink= PlayLink;}
+    // else{const PrimaryLink = WriteLink;}
+    const PrimaryLink = isSpeak ? RecordLink : isListen ? PlayLink : WriteLink;
     return (
       <div
         className={['hero-box', type, status].join(' ')}

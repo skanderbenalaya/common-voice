@@ -7,6 +7,7 @@ export function track(
     | 'Home-New'
     | 'Recording'
     | 'Listening'
+    | 'Writing'
     | 'Profile'
     | 'Languages'
     | 'Data'
@@ -54,6 +55,7 @@ export function trackHome(
     | 'speak'
     | 'speak-mars'
     | 'listen'
+    | 'write'
     | 'read-more'
     | 'metric-locale-change'
     | 'change-benefits-tabs'
@@ -73,6 +75,7 @@ export function trackRecording(
     | 'view-shortcuts'
     | 'shortcut'
     | 'skip'
+    | 'write'
     | 'listen',
   locale: string
 ) {
@@ -82,6 +85,7 @@ export function trackRecording(
 export function trackListening(
   action:
     | 'listen'
+    | 'write'
     | 'listen-home'
     | 'vote-yes'
     | 'vote-no'
@@ -110,7 +114,7 @@ export function trackProfile(
 }
 
 export function trackVoiceAvatar(
-  action: 'self-listen' | 'listen' | 'create-voice-avatar',
+  action: 'self-listen' | 'listen' | 'Write' | 'create-voice-avatar',
   locale: string
 ) {
   track('voice-avatar', action, locale);
@@ -142,6 +146,7 @@ export function trackDashboard(
   action:
     | 'speak-cta'
     | 'listen-cta'
+    | 'write-cta'
     | 'change-language'
     | 'leaderboard-load-more',
   locale: string
